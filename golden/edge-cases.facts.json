@@ -1,0 +1,126 @@
+{
+  "schema": "wl.facts.v3",
+  "window": {
+    "start": "2026-10-28",
+    "end": "2026-10-28",
+    "tz": "Asia/Kolkata"
+  },
+  "coverage": {
+    "days": 1,
+    "complete_days": 0,
+    "fidelity": "L4",
+    "confidence": 0.15
+  },
+  "totals": {
+    "active_h": 2.4,
+    "delta_pct": null,
+    "devices": 1
+  },
+  "shape": {
+    "by_hour": [
+      0.5,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.2,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.7,
+      0.0,
+      0.0,
+      0.8,
+      0.0,
+      0.0,
+      0.2,
+      0.0,
+      0.0,
+      0.3
+    ],
+    "peak_hour": 17,
+    "late_night_share": 0.14,
+    "switches_per_hour": 0.4,
+    "short_session_share": 0.0,
+    "focus_hours": 2.0,
+    "ai_share": 0.1
+  },
+  "days": [
+    {
+      "day": "2026-10-28",
+      "active_h": 2.43,
+      "switches": 1,
+      "sessions": 8,
+      "late_h": 0.33,
+      "focus_h": 2.0,
+      "longest_run_min": 50.0,
+      "longest_gap_min": 234.0,
+      "coverage": 0.15
+    }
+  ],
+  "apps": [
+    {
+      "id": "vscode",
+      "name": "Visual Studio Code",
+      "h": 0.9,
+      "share": 0.38,
+      "sessions": 2,
+      "median_session_min": 28.0
+    },
+    {
+      "id": "chrome",
+      "name": "Google Chrome",
+      "h": 0.7,
+      "share": 0.27,
+      "sessions": 2,
+      "median_session_min": 20.0
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "h": 0.5,
+      "share": 0.21,
+      "sessions": 1,
+      "median_session_min": 30.0
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "h": 0.3,
+      "share": 0.14,
+      "sessions": 1,
+      "median_session_min": 20.0
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "h": 0.2,
+      "share": 0.1,
+      "sessions": 1,
+      "median_session_min": 15.0
+    },
+    {
+      "id": "terminal",
+      "name": "Terminal",
+      "h": 0.2,
+      "share": 0.1,
+      "sessions": 1,
+      "median_session_min": 15.0
+    }
+  ],
+  "clusters": [],
+  "patterns": [],
+  "goals": [],
+  "notes": {},
+  "meta": {
+    "algo_version": "wl-oracle-0.1.0",
+    "params_hash": "0d82995caf14e7e9",
+    "detectors": "d01-d08@1",
+    "baseline_weeks": 0
+  }
+}

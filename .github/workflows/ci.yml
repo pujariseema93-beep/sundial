@@ -1,0 +1,37 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  oracle:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e oracle pytest ruff
+      - name: Lint
+        run: ruff check oracle
+      - name: Test
+        working-directory: oracle
+        run: python -m pytest
+      - name: Fixtures are reproducible
+        run: |
+          python fixtures/generate.py
+          git diff --exit-code fixtures/
+      - name: CLI smoke test
+        working-directory: oracle
+        run: |
+          python -m wl_oracle.cli facts ../fixtures/desk-5weeks.jsonl \
+            --start 2026-10-26 --end 2026-11-01 --out /tmp/week.json
+          python -c "import json; d=json.load(open('/tmp/week.json')); assert d['schema']=='wl.facts.v3'"

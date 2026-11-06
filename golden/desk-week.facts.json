@@ -1,0 +1,241 @@
+{
+  "schema": "wl.facts.v3",
+  "window": {
+    "start": "2026-10-26",
+    "end": "2026-11-01",
+    "tz": "Asia/Kolkata"
+  },
+  "coverage": {
+    "days": 7,
+    "complete_days": 4,
+    "fidelity": "L4",
+    "confidence": 0.78
+  },
+  "totals": {
+    "active_h": 49.9,
+    "delta_pct": 14.5,
+    "devices": 1
+  },
+  "shape": {
+    "by_hour": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.7,
+      0.9,
+      0.9,
+      0.4,
+      0.1,
+      0.8,
+      0.8,
+      0.9,
+      0.6,
+      0.0,
+      0.0,
+      0.0,
+      0.4,
+      0.5
+    ],
+    "peak_hour": 12,
+    "late_night_share": 0.13,
+    "switches_per_hour": 1.9,
+    "short_session_share": 0.22,
+    "focus_hours": 43.6,
+    "ai_share": 0.07
+  },
+  "days": [
+    {
+      "day": "2026-10-26",
+      "active_h": 8.97,
+      "switches": 19,
+      "sessions": 22,
+      "late_h": 1.58,
+      "focus_h": 8.05,
+      "longest_run_min": 240.0,
+      "longest_gap_min": 208.4,
+      "coverage": 0.64
+    },
+    {
+      "day": "2026-10-27",
+      "active_h": 8.96,
+      "switches": 19,
+      "sessions": 22,
+      "late_h": 1.58,
+      "focus_h": 8.04,
+      "longest_run_min": 240.0,
+      "longest_gap_min": 208.4,
+      "coverage": 0.64
+    },
+    {
+      "day": "2026-10-28",
+      "active_h": 11.47,
+      "switches": 19,
+      "sessions": 22,
+      "late_h": 1.58,
+      "focus_h": 9.55,
+      "longest_run_min": 330.0,
+      "longest_gap_min": 208.4,
+      "coverage": 0.82
+    },
+    {
+      "day": "2026-10-29",
+      "active_h": 8.96,
+      "switches": 19,
+      "sessions": 22,
+      "late_h": 1.58,
+      "focus_h": 8.04,
+      "longest_run_min": 240.0,
+      "longest_gap_min": 208.4,
+      "coverage": 0.64
+    },
+    {
+      "day": "2026-10-30",
+      "active_h": 7.38,
+      "switches": 17,
+      "sessions": 19,
+      "late_h": 0.0,
+      "focus_h": 6.47,
+      "longest_run_min": 240.0,
+      "longest_gap_min": 248.4,
+      "coverage": 0.83
+    },
+    {
+      "day": "2026-10-31",
+      "active_h": 2.08,
+      "switches": 0,
+      "sessions": 4,
+      "late_h": 0.0,
+      "focus_h": 1.75,
+      "longest_run_min": 45.0,
+      "longest_gap_min": 550.0,
+      "coverage": 0.78
+    },
+    {
+      "day": "2026-11-01",
+      "active_h": 2.08,
+      "switches": 0,
+      "sessions": 4,
+      "late_h": 0.0,
+      "focus_h": 1.75,
+      "longest_run_min": 45.0,
+      "longest_gap_min": 550.0,
+      "coverage": 0.78
+    }
+  ],
+  "apps": [
+    {
+      "id": "vscode",
+      "name": "Visual Studio Code",
+      "h": 33.2,
+      "share": 0.67,
+      "sessions": 24,
+      "median_session_min": 80.0
+    },
+    {
+      "id": "chrome",
+      "name": "Google Chrome",
+      "h": 5.0,
+      "share": 0.1,
+      "sessions": 33,
+      "median_session_min": 2.5
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "h": 3.5,
+      "share": 0.07,
+      "sessions": 9,
+      "median_session_min": 18.0
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "h": 3.0,
+      "share": 0.06,
+      "sessions": 37,
+      "median_session_min": 1.5
+    },
+    {
+      "id": "terminal",
+      "name": "Terminal",
+      "h": 2.1,
+      "share": 0.04,
+      "sessions": 5,
+      "median_session_min": 25.0
+    },
+    {
+      "id": "mail",
+      "name": "Mail",
+      "h": 1.2,
+      "share": 0.03,
+      "sessions": 5,
+      "median_session_min": 15.0
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "h": 0.8,
+      "share": 0.02,
+      "sessions": 2,
+      "median_session_min": 25.0
+    }
+  ],
+  "clusters": [],
+  "patterns": [
+    {
+      "id": "D02",
+      "name": "fragmentation_spike",
+      "severity": "high",
+      "evidence": [
+        "switches_per_hour 0.9 -> 1.9",
+        "short_session_share 0.0 -> 0.22"
+      ],
+      "scope": "window"
+    },
+    {
+      "id": "D01",
+      "name": "late_night_drift",
+      "severity": "medium",
+      "evidence": [
+        "late_night_share 0.0 -> 0.127",
+        "4 days with 30+ min after 22:00"
+      ],
+      "scope": "days 2026-10-26, 2026-10-27, 2026-10-28, 2026-10-29"
+    },
+    {
+      "id": "D05",
+      "name": "break_deficit",
+      "severity": "medium",
+      "evidence": [
+        "5 days with an unbroken run over 120 min",
+        "longest run 330 min on 2026-10-28"
+      ],
+      "scope": "2026-10-26, 2026-10-27, 2026-10-28, 2026-10-29, 2026-10-30"
+    },
+    {
+      "id": "D04",
+      "name": "deep_work_present",
+      "severity": "positive",
+      "evidence": [
+        "7 days with 90+ min in blocks of 20+ min",
+        "focus_hours total 43.6"
+      ],
+      "scope": "2026-10-26, 2026-10-27, 2026-10-28, 2026-10-29, 2026-10-30, 2026-10-31, 2026-11-01"
+    }
+  ],
+  "goals": [],
+  "notes": {},
+  "meta": {
+    "algo_version": "wl-oracle-0.1.0",
+    "params_hash": "0d82995caf14e7e9",
+    "detectors": "d01-d08@1",
+    "baseline_weeks": 4
+  }
+}

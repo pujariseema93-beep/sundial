@@ -1,0 +1,17 @@
+{"type": "app", "id": "vscode", "name": "Visual Studio Code", "category": "development"}
+{"type": "app", "id": "terminal", "name": "Terminal", "category": "development"}
+{"type": "app", "id": "chrome", "name": "Google Chrome", "category": "browser"}
+{"type": "app", "id": "slack", "name": "Slack", "category": "communication", "is_communication": true}
+{"type": "app", "id": "mail", "name": "Mail", "category": "communication", "is_communication": true}
+{"type": "app", "id": "claude", "name": "Claude", "category": "ai", "is_ai_tool": true}
+{"type": "app", "id": "figma", "name": "Figma", "category": "design"}
+{"type": "event", "id": "dev-edge-1-00009", "device_id": "dev-edge-1", "kind": "app_focus", "ts_start": 1793154600000, "ts_end": 1793155500000, "local_date": "2026-10-28", "app_id": "terminal", "idle_ms": 0, "collector": "test-harness@0.0.0", "title": "morning"}
+{"type": "event", "id": "dev-edge-1-00002", "device_id": "dev-edge-1", "kind": "app_focus", "ts_start": 1793161800000, "ts_end": 1793164500000, "local_date": "2026-10-28", "app_id": "vscode", "idle_ms": 2400000, "collector": "test-harness@0.0.0", "title": "reading, then gone"}
+{"type": "event", "id": "dev-edge-1-00003", "device_id": "dev-edge-1", "kind": "app_focus", "ts_start": 1793176200000, "ts_end": 1793177400000, "local_date": "2026-10-28", "app_id": "chrome", "idle_ms": 0, "collector": "test-harness@0.0.0", "title": "before lock"}
+{"type": "event", "id": "dev-edge-1-00004", "device_id": "dev-edge-1", "kind": "lock", "ts_start": 1793177460000, "ts_end": 1793177580000, "local_date": "2026-10-28", "collector": "test-harness@0.0.0"}
+{"type": "event", "id": "dev-edge-1-00005", "device_id": "dev-edge-1", "kind": "app_focus", "ts_start": 1793177700000, "ts_end": 1793178900000, "local_date": "2026-10-28", "app_id": "chrome", "idle_ms": 0, "collector": "test-harness@0.0.0", "title": "after lock"}
+{"type": "event", "id": "dev-edge-1-00006", "device_id": "dev-edge-1", "kind": "app_focus", "ts_start": 1793183400000, "ts_end": 1793183400000, "local_date": "2026-10-28", "app_id": "mail", "idle_ms": 0, "collector": "test-harness@0.0.0"}
+{"type": "event", "id": "dev-edge-1-00007", "device_id": "dev-edge-1", "kind": "app_focus", "ts_start": 1793187000000, "ts_end": 1793188800000, "local_date": "2026-10-28", "app_id": "figma", "idle_ms": 0, "collector": "test-harness@0.0.0", "title": "design"}
+{"type": "event", "id": "dev-edge-1-00008", "device_id": "dev-edge-1", "kind": "app_focus", "ts_start": 1793188500000, "ts_end": 1793189700000, "local_date": "2026-10-28", "app_id": "slack", "idle_ms": 0, "collector": "test-harness@0.0.0", "title": "interrupt"}
+{"type": "event", "id": "dev-edge-1-00010", "device_id": "dev-edge-1", "kind": "app_focus", "ts_start": 1793199600000, "ts_end": 1793200500000, "local_date": "2026-10-28", "app_id": "claude", "idle_ms": 0, "collector": "test-harness@0.0.0", "title": "evening"}
+{"type": "event", "id": "dev-edge-1-00001", "device_id": "dev-edge-1", "kind": "app_focus", "ts_start": 1793211000000, "ts_end": 1793214000000, "local_date": "2026-10-28", "app_id": "vscode", "idle_ms": 0, "collector": "test-harness@0.0.0", "title": "late session"}

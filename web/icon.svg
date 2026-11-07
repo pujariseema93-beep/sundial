@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Sundial">
+  <rect width="512" height="512" rx="96" fill="#0f6b63"/>
+  <circle cx="256" cy="286" r="132" fill="none" stroke="#e3f0ed" stroke-width="14"/>
+  <path d="M256 286 L256 132" stroke="#e3f0ed" stroke-width="16" stroke-linecap="round"/>
+  <path d="M256 286 L336 216" stroke="#f7ecdc" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="256" cy="286" r="14" fill="#f7ecdc"/>
+  <path d="M124 286 h264" stroke="#e3f0ed" stroke-width="8" stroke-linecap="round" opacity="0.45"/>
+</svg>

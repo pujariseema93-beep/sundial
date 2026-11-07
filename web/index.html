@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sundial — local-first attention dashboard</title>
+<meta name="description" content="A local-first wellbeing dashboard for attention. Your events never leave this browser.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0f6b63">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div id="app" aria-live="polite"></div>
+<noscript>
+  <div class="noscript">
+    <h1>Sundial needs JavaScript</h1>
+    <p>Every number is computed in your browser, so there is no server to fall back on. The app is a single static page; nothing is sent anywhere.</p>
+  </div>
+</noscript>
+<script type="module" src="./app/main.js"></script>
+</body>
+</html>

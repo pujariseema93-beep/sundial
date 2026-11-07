@@ -1,0 +1,11 @@
+{
+  "name": "sundial-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Sundial web build: dashboard, reflection ritual and BYOK preview",
+  "scripts": {
+    "test": "node --test tests/",
+    "serve": "python3 -m http.server 8080"
+  }
+}

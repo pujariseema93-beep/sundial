@@ -15,6 +15,7 @@ Sundial records how you actually use your devices, turns that record into plain 
 | `docs/metrics.md` | Every metric, its formula, and its parameters |
 | `docs/adr/` | Decisions with their reasoning, including the ones that changed |
 | `oracle/` | The reference implementation of the metric engine (Python) |
+| `web/` | The web build: a static dashboard that computes everything in the browser |
 | `fixtures/` | Deterministic synthetic capture streams |
 | `golden/` | Committed facts documents the Rust core must reproduce |
 
@@ -44,6 +45,13 @@ python -m wl_oracle.cli facts ../fixtures/desk-5weeks.jsonl \
 
 `facts` emits the `wl.facts.v3` document — the only thing the AI layer is ever allowed to receive.
 
+The web build is a static site with no build step:
+
+```bash
+cd web && python3 -m http.server 8080   # then open http://localhost:8080
+node --test web/tests/                  # JS engine vs the same golden facts
+```
+
 ## Layout
 
 ```
@@ -53,6 +61,10 @@ golden/          facts documents pinned by tests
 oracle/          wl_oracle package, CLI and tests
   wl_oracle/     model · intervals · sessions · metrics · detectors · facts · cli
   tests/         hand-computed expectations, then golden regressions
+web/             static PWA: engine port, views, BYOK layer, service worker
+  engine/        the metric engine in JavaScript, tested against golden/
+  app/           views, store, template writer, insight layer, demo data
+  tests/         node --test, proving parity with the oracle
 ```
 
 ## Principles that constrain the code
@@ -67,6 +79,7 @@ oracle/          wl_oracle package, CLI and tests
 - [x] Event contract, metric definitions, ADRs
 - [x] Reference implementation: intervals, sessions, metrics, detectors D01–D08
 - [x] Fixture corpus and golden facts
+- [x] Web build: dashboard, reflection ritual, BYOK preview, offline shell
 - [ ] Rust core (`wl-core`) passing the same goldens
 - [ ] Windows collector and Tauri shell (M1)
 - [ ] Android collector and Compose shell (M2)

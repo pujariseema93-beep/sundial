@@ -35,3 +35,13 @@ jobs:
           python -m wl_oracle.cli facts ../fixtures/desk-5weeks.jsonl \
             --start 2026-10-26 --end 2026-11-01 --out /tmp/week.json
           python -c "import json; d=json.load(open('/tmp/week.json')); assert d['schema']=='wl.facts.v3'"
+
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Engine parity with the golden facts
+        run: node --test web/tests/

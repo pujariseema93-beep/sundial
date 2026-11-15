@@ -4,7 +4,9 @@ A local-first, cross-platform wellbeing app for attention — with a bring-your-
 
 Sundial records how you actually use your devices, turns that record into plain arithmetic, and — only when you ask — uses a language model that **you** pay for, with **your** own API key, to explain the pattern in words and suggest one change.
 
-**Status: pre-alpha.** The architecture is fixed and specified; the metric engine is being built and tested against golden fixtures. Nothing here talks to a network or reads a real device yet.
+**Status: pre-alpha.** The architecture is fixed and specified; the metric engine is built and tested against golden fixtures. Nothing here talks to a network or reads a real device yet.
+
+**Try it:** <https://pujariseema93-beep.github.io/sundial/> — the web build, running entirely in your browser. It starts empty because a browser cannot see your desktop: press *Load the demo week*, or import a collector stream.
 
 ## What is in this repository
 
